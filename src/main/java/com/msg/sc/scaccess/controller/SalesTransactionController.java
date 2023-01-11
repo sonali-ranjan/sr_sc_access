@@ -17,17 +17,17 @@ public class SalesTransactionController {
 
     }
 
-    @GetMapping()
+    @GetMapping("/SalesTransactions")
     public salesTransactionList getSalesTransactions() {
         return SalesTransactionService.getSalesTransactions();
     }
 
-    @GetMapping()
+    @GetMapping("/SalesTransactions(%s)")
     public salesTransaction getSalesTransactions(@PathVariable("id") Long salesTransactionId) {
         return SalesTransactionService.getSalesTransactionById(salesTransactionId);
     }
 
-    @PostMapping()
+    @GetMapping("/salesTransaction")
     public salesTransactionList createSalesTransactions(@RequestBody List<salesTransaction> salesTransactions) {
         return SalesTransactionService.createSalesTransaction(salesTransactions);
     }
