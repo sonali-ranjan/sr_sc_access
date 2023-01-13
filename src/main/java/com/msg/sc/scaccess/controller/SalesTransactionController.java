@@ -17,18 +17,18 @@ public class SalesTransactionController {
 
     }
 
-    @GetMapping("/SalesTransactions")
+    @GetMapping("/salesTransactions")
     public salesTransactionList getSalesTransactions() {
         return SalesTransactionService.getSalesTransactions();
     }
 
-    @GetMapping("/SalesTransactions(%s)")
-    public salesTransaction getSalesTransactions(@PathVariable("id") Long salesTransactionId) {
-        return SalesTransactionService.getSalesTransactionById(salesTransactionId);
-    }
+//@GetMapping("/SalesTransactions(%s)")
+//public salesTransaction getSalesTransactions(@PathVariable("id") Long salesTransactionId) {
+//    return SalesTransactionService.getSalesTransactionById(salesTransactionId);
+//}
 
-    @GetMapping("/salesTransaction")
-    public salesTransactionList createSalesTransactions(@RequestBody List<salesTransaction> salesTransactions) {
-        return SalesTransactionService.createSalesTransaction(salesTransactions);
-    }
+//@PostMapping("/salesTransactions")
+//public salesTransactionList createSalesTransactions(@RequestBody List<salesTransaction> salesTransactions) {
+//    return SalesTransactionService.createSalesTransaction(salesTransactions);
+//}
 }

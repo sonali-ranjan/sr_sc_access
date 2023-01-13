@@ -5,5 +5,5 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 import java.util.List;
 @JsonInclude(Include.NON_NULL)
-public record lineNumber(Object value, List<unitType> unitType){
+public record discountPercent(Object value, List<unitType> unitType){
 }

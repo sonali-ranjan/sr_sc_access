@@ -16,15 +16,15 @@ public class SalesTransactionService {
     }
 
     public salesTransactionList getSalesTransactions() {
-        return restTemplate.getForObject("/SalesTransactions", salesTransactionList.class);
+        return restTemplate.getForObject("/salesTransactions", salesTransactionList.class);
     }
 
-    public salesTransaction getSalesTransactionById(Long salesTransactionId) {
-        return restTemplate.getForObject("/SalesTransactions(%s)".formatted(salesTransactionId),
-                salesTransaction.class);
-    }
+    //public salesTransaction getSalesTransactionById(Long salesTransactionId) {
+    //    return restTemplate.getForObject("/SalesTransactions(%s)".formatted(salesTransactionId),
+    //            salesTransaction.class);
+    //}
 
-    public salesTransactionList createSalesTransaction(List<salesTransaction> salesTransactions) {
-        return restTemplate.postForObject("/salesTransaction", salesTransactions, salesTransactionList.class);
-    }
+    //public salesTransactionList createSalesTransaction(List<salesTransaction> salesTransactions) {
+    //    return restTemplate.postForObject("/salesTransactions", salesTransactions, salesTransactionList.class);
+    //}
 }

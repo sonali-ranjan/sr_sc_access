@@ -5,5 +5,5 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 import java.util.List;
 @JsonInclude(Include.NON_NULL)
-public record subLineNumber(Object value, Long unitType){
+public record subLineNumber(Object value, List<unitType> unitType){
 }
