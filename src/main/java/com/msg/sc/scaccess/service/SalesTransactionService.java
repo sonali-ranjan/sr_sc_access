@@ -19,7 +19,7 @@ public class SalesTransactionService {
     public SalesTransactionList getSalesTransactions() {
         return restTemplate.getForObject("/salesTransactions", SalesTransactionList.class);
     }
-
+/*
     public SalesTransaction getSalesTransactionById(Long salesTransactionId) {
         return restTemplate.getForObject("/SalesTransactions(%s)".formatted(salesTransactionId),
                 SalesTransaction.class);
@@ -29,5 +29,5 @@ public class SalesTransactionService {
         return restTemplate.postForObject("/salesTransactions", salesTransactions, SalesTransactionList.class);
 
     }
-
+*/
 }
