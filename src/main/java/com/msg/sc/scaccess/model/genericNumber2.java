@@ -5,5 +5,5 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 import java.util.List;
 @JsonInclude(Include.NON_NULL)
-public record genericNumber2(Object value, List<unitType> unitType){
+public record genericNumber2(int value, unitType unitType){
 }
