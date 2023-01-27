@@ -24,8 +24,8 @@ public class SalesOrderController {
     }
 
     @GetMapping("/salesOrders/{id}")
-    public SalesOrder getSalesOrder(@PathVariable("id") Long salesOrderId) {
-        return salesOrderService.getSalesOrderById(salesOrderId);
+    public SalesOrder getSalesOrder(@PathVariable("id") Long orderId) {
+        return salesOrderService.getSalesOrderById(orderId);
     }
 
     @PostMapping("/salesOrders")

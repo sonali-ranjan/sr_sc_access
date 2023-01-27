@@ -1,8 +1,9 @@
 package com.msg.sc.scaccess.service;
 
-import com.msg.sc.scaccess.controller.SalesTransactionController;
 import com.msg.sc.scaccess.model.SalesTransaction;
+import com.msg.sc.scaccess.model.SalesTransactionP;
 import com.msg.sc.scaccess.model.SalesTransactionList;
+import com.msg.sc.scaccess.model.SalesTransactionListP;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -19,15 +20,15 @@ public class SalesTransactionService {
     public SalesTransactionList getSalesTransactions() {
         return restTemplate.getForObject("/salesTransactions", SalesTransactionList.class);
     }
-/*
-    public SalesTransaction getSalesTransactionById(Long salesTransactionId) {
-        return restTemplate.getForObject("/SalesTransactions(%s)".formatted(salesTransactionId),
+
+    public SalesTransaction getSalesTransactionById(Long salesTransactionsSeq) {
+        return restTemplate.getForObject("/salesTransactions(%s)".formatted(salesTransactionsSeq),
                 SalesTransaction.class);
     }
 
-    public SalesTransactionList createSalesTransaction(List<SalesTransaction> salesTransactions) {
-        return restTemplate.postForObject("/salesTransactions", salesTransactions, SalesTransactionList.class);
+    public SalesTransactionListP createSalesTransaction(List<SalesTransactionP> salesTransactions) {
+        return restTemplate.postForObject("/salesTransactions", salesTransactions, SalesTransactionListP.class);
 
     }
-*/
+
 }

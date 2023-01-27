@@ -19,8 +19,8 @@ public class SalesOrderService {
         return restTemplate.getForObject("/salesOrders", SalesOrderList.class);
     }
 
-    public SalesOrder getSalesOrderById(Long salesOrderId) {
-        return restTemplate.getForObject("/salesOrders(%s)".formatted(salesOrderId), SalesOrder.class);
+    public SalesOrder getSalesOrderById(Long orderId) {
+        return restTemplate.getForObject("/salesOrders(%s)".formatted(orderId), SalesOrder.class);
     }
 
     public SalesOrderList createSalesOrder(List<SalesOrder> salesOrder) {

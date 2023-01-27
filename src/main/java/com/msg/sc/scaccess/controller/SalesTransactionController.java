@@ -1,7 +1,9 @@
 package com.msg.sc.scaccess.controller;
 
 import com.msg.sc.scaccess.model.SalesTransaction;
+import com.msg.sc.scaccess.model.SalesTransactionP;
 import com.msg.sc.scaccess.model.SalesTransactionList;
+import com.msg.sc.scaccess.model.SalesTransactionListP;
 import com.msg.sc.scaccess.service.SalesTransactionService;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,16 +23,17 @@ public class SalesTransactionController {
     public SalesTransactionList getSalesTransactions() {
         return SalesTransactionService.getSalesTransactions();
     }
-/*
-    @GetMapping("/SalesTransactions(%s)")
-    public SalesTransaction getSalesTransactions(@PathVariable("id") Long salesTransactionId) {
-        return SalesTransactionService.getSalesTransactionById(salesTransactionId);
+
+    //@GetMapping("/salesTransactions{id}")
+    @GetMapping("/salesTransactions{id}")
+    public SalesTransaction getSalesTransactions(@PathVariable("id") Long salesTransactionsSeq) {
+        return SalesTransactionService.getSalesTransactionById(salesTransactionsSeq);
     }
 
     @PostMapping("/salesTransactions")
-    public SalesTransactionList createSalesTransactions(@RequestBody List<SalesTransaction> salesTransactions) {
+    public SalesTransactionListP createSalesTransactions(@RequestBody List<SalesTransactionP> salesTransactions) {
         return SalesTransactionService.createSalesTransaction(salesTransactions);
     }
 
-*/
+
 }
