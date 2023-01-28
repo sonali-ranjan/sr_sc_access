@@ -24,8 +24,7 @@ public class SalesTransactionController {
         return SalesTransactionService.getSalesTransactions();
     }
 
-    //@GetMapping("/salesTransactions{id}")
-    @GetMapping("/salesTransactions{id}")
+    @GetMapping("/salesTransactions/{id}")
     public SalesTransaction getSalesTransactions(@PathVariable("id") Long salesTransactionsSeq) {
         return SalesTransactionService.getSalesTransactionById(salesTransactionsSeq);
     }
